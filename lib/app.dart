@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mimic_mobile/home/home.dart';
+
+import 'main/home/home_screen.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -11,8 +12,11 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Home(),
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      home: const HomeScreen(),
     );
   }
 }
