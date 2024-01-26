@@ -32,6 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 GestureDetector(
                   onTap: () {
                     debugPrint('login');
+                    debugPrint(MediaQuery.of(context).size.width.toString());
+                    debugPrint(MediaQuery.of(context).size.height.toString());
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -77,16 +79,15 @@ class _HomeScreenState extends State<HomeScreen> {
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: SizedBox(
-            width: 500,
-            height: 500,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
             child: Stack(
               clipBehavior: Clip.none,
               children: [
-                Positioned(
-                  left: 0,
-                  right: 0,
-                  top: 240,
+                Align(
+                  alignment: Alignment.center,
                   child: Container(
+                    width: 350,
                     decoration: BoxDecoration(
                       color: Colors.black26,
                       borderRadius: BorderRadius.circular(8),
@@ -95,6 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       scrollDirection: Axis.horizontal,
                       padding: const EdgeInsets.all(8),
                       child: Row(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           const GreyButton(
                             child: Icon(
