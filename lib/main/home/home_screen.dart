@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
 
+import '../../common/widget/grey_button.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -72,169 +74,128 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 8, right: 8),
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: [
-            Positioned(
-              left: 0,
-              right: 0,
-              top: 240,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.black26,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  padding: const EdgeInsets.all(8),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: const Icon(
-                          Icons.play_arrow,
-                          color: Colors.black,
-                          size: 40,
-                        ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: SizedBox(
+            width: 500,
+            height: 500,
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  top: 240,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black26,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      padding: const EdgeInsets.all(8),
+                      child: Row(
+                        children: [
+                          const GreyButton(
+                            child: Icon(
+                              Icons.play_arrow,
+                              color: Colors.black,
+                              size: 40,
+                            ),
+                          ),
+                          const SizedBox(width: 5),
+                          const GreyButton(
+                            child: Icon(
+                              Icons.play_arrow,
+                              color: Colors.black,
+                              size: 40,
+                            ),
+                          ),
+                          const SizedBox(width: 5),
+                          const GreyButton(
+                            child: Icon(
+                              Icons.play_arrow,
+                              color: Colors.black,
+                              size: 40,
+                            ),
+                          ),
+                          const SizedBox(width: 5),
+                          GreyButton(
+                            child: Image.asset(
+                              'assets/image/m.png',
+                              scale: 4,
+                            ),
+                          ),
+                          const SizedBox(width: 5),
+                          const GreyButton(
+                            child: Icon(
+                              Icons.play_arrow,
+                              color: Colors.black,
+                              size: 40,
+                            ),
+                          ),
+                          const SizedBox(width: 5),
+                          GreyButton(
+                            child: Image.asset(
+                              'assets/image/m.png',
+                              scale: 4,
+                            ),
+                          ),
+                          const SizedBox(width: 5),
+                          const GreyButton(
+                            child: Icon(
+                              Icons.play_arrow,
+                              color: Colors.black,
+                              size: 40,
+                            ),
+                          ),
+                          const SizedBox(width: 5),
+                          GreyButton(
+                            child: Image.asset(
+                              'assets/image/m.png',
+                              scale: 4,
+                            ),
+                          ),
+                          const SizedBox(width: 5),
+                        ],
                       ),
-                      const SizedBox(width: 5),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: const Icon(
-                          Icons.play_arrow,
-                          color: Colors.black,
-                          size: 40,
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: const Icon(
-                          Icons.play_arrow,
-                          color: Colors.black,
-                          size: 40,
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Image.asset(
-                          'assets/image/m.png',
-                          scale: 4,
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: const Icon(
-                          Icons.play_arrow,
-                          color: Colors.black,
-                          size: 40,
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Image.asset(
-                          'assets/image/m.png',
-                          scale: 4,
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: const Icon(
-                          Icons.play_arrow,
-                          color: Colors.black,
-                          size: 40,
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Image.asset(
-                          'assets/image/m.png',
-                          scale: 4,
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                    ],
+                    ),
                   ),
                 ),
-              ),
-            ),
-            Positioned(
-              top: 10,
-              left: 0,
-              right: 0,
-              child: Container(
-                width: 400,
-                height: 250,
-                decoration: const BoxDecoration(
-                  color: Colors.transparent,
-                  image: DecorationImage(
-                    image: AssetImage('assets/image/sing2.png'),
+                Positioned(
+                  top: 10,
+                  left: 0,
+                  right: 0,
+                  child: Container(
+                    width: 400,
+                    height: 250,
+                    decoration: const BoxDecoration(
+                      color: Colors.transparent,
+                      image: DecorationImage(
+                        image: AssetImage('assets/image/sing2.png'),
+                      ),
+                    ),
                   ),
                 ),
-              ),
+                Positioned(
+                  left: -30,
+                  top: 200,
+                  child: Image.asset(
+                    'assets/image/mimic_beam.png',
+                    scale: 5,
+                  ),
+                ),
+                Positioned(
+                  right: -30,
+                  top: 200,
+                  child: Image.asset(
+                    'assets/image/mimic_beam2.png',
+                    scale: 5,
+                  ),
+                ),
+              ],
             ),
-            Positioned(
-              left: -30,
-              top: 200,
-              child: Image.asset(
-                'assets/image/mimic_beam.png',
-                scale: 5,
-              ),
-            ),
-            Positioned(
-              right: -30,
-              top: 200,
-              child: Image.asset(
-                'assets/image/mimic_beam2.png',
-                scale: 5,
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
