@@ -33,8 +33,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 GestureDetector(
                   onTap: () {
                     debugPrint('login');
-                    debugPrint(MediaQuery.of(context).size.width.toString());
-                    debugPrint(MediaQuery.of(context).size.height.toString());
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -78,8 +76,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: OrientationBuilder(
         builder: (context, orientation) {
           return orientation == Orientation.portrait
-              ? VerticalHome()
-              : HorizontalHome();
+              ? const VerticalHome()
+              : const HorizontalHome();
         },
       ),
     );
