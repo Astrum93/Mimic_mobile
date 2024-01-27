@@ -18,12 +18,13 @@ class _VerticalHomeState extends State<VerticalHome> {
         scrollDirection: Axis.vertical,
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
+          height: MediaQuery.of(context).size.height / 2,
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              Align(
-                alignment: Alignment.center,
+              Positioned(
+                top: 250,
+                left: 20,
                 child: Container(
                   width: 350,
                   decoration: BoxDecoration(

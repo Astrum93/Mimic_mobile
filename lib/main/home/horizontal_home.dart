@@ -22,10 +22,12 @@ class _HorizontalHomeState extends State<HorizontalHome> {
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              Align(
-                alignment: Alignment.center,
+              /// 버튼들
+              Positioned(
+                top: 270,
+                left: 220,
                 child: Container(
-                  width: 350,
+                  width: 400,
                   decoration: BoxDecoration(
                     color: Colors.black26,
                     borderRadius: BorderRadius.circular(8),
@@ -102,6 +104,8 @@ class _HorizontalHomeState extends State<HorizontalHome> {
                   ),
                 ),
               ),
+
+              /// 동영상
               Positioned(
                 top: 10,
                 left: 0,
@@ -117,6 +121,8 @@ class _HorizontalHomeState extends State<HorizontalHome> {
                   ),
                 ),
               ),
+
+              /// 왼쪽 mimic icon
               Positioned(
                 left: -30,
                 top: 200,
@@ -125,6 +131,8 @@ class _HorizontalHomeState extends State<HorizontalHome> {
                   scale: 5,
                 ),
               ),
+
+              /// 오른쪽 mimic icon
               Positioned(
                 right: -30,
                 top: 200,
