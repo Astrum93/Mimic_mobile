@@ -40,10 +40,17 @@ class _LoginState extends State<Login> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
+                  /// 아이디
                   TextFormField(
                     keyboardType: TextInputType.text,
                     obscureText: false,
+                    cursorColor: Colors.black,
+                    style: const TextStyle(color: Colors.black),
                     decoration: const InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: '이메일 주소 또는 전화번호',
+                      hintStyle: TextStyle(color: Colors.black),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.all(
@@ -58,6 +65,42 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
+
+                  const SizedBox(height: 10),
+
+                  /// 비밀번호
+                  TextFormField(
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
+                    cursorColor: Colors.black,
+                    style: const TextStyle(color: Colors.black),
+                    decoration: const InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: '비밀번호',
+                      hintStyle: TextStyle(color: Colors.black),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 20),
+                  GestureDetector(
+                    child: Container(
+                      decoration: BoxDecoration(color: AppColors.mainColor),
+                      child: Text('로그인'),
+                    ),
+                  )
                 ],
               ),
             ),
