@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
+import 'package:mimic_mobile/main/fab/log_in.dart';
 import 'package:mimic_mobile/main/home/vertical_home.dart';
 
 import 'horizontal_home.dart';
@@ -33,6 +34,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 GestureDetector(
                   onTap: () {
                     debugPrint('login');
+                    showDialog(
+                        barrierDismissible: false,
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Login();
+                        });
                   },
                   child: Container(
                     decoration: BoxDecoration(
