@@ -83,8 +83,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: OrientationBuilder(
         builder: (context, orientation) {
           return orientation == Orientation.portrait
-              ? const VerticalHome()
-              : const HorizontalHome();
+              ? VerticalHome()
+              : HorizontalHome();
         },
       ),
     );
