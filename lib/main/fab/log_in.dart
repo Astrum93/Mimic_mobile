@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
+import 'package:mimic_mobile/main/home/join/join_screen.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -170,7 +171,12 @@ class _LoginState extends State<Login> {
 
                     /// 멤버쉽 가입 버튼
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            (context),
+                            MaterialPageRoute(
+                                builder: (context) => const JoinScreen()));
+                      },
                       child: Container(
                         width: 210,
                         height: 35,
