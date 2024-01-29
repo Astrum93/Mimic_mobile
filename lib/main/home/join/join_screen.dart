@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
+import 'package:mimic_mobile/main/home/home_screen.dart';
 
 class JoinScreen extends StatefulWidget {
   const JoinScreen({super.key});
@@ -21,7 +22,10 @@ class _JoinScreenState extends State<JoinScreen> {
               Align(
                 alignment: Alignment.topLeft,
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                  },
                   child: Image.asset(
                     'assets/image/mimic.png',
                     scale: 4,
@@ -38,30 +42,65 @@ class _JoinScreenState extends State<JoinScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: AppColors.mainColor,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          '전송',
-                          style: TextStyle(
+              Container(
+                width: MediaQuery.of(context).size.width - 100,
+                child: Row(
+                  children: [
+                    Flexible(
+                      child: TextFormField(
+                        keyboardType: TextInputType.text,
+                        obscureText: false,
+                        cursorColor: Colors.black,
+                        style: const TextStyle(color: Colors.black),
+                        decoration: const InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          hintText: '이메일 주소 입력',
+                          hintStyle: TextStyle(
                             color: Colors.black,
-                            fontSize: 18,
                             fontWeight: FontWeight.bold,
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(10),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(10),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 5),
+                    GestureDetector(
+                      onTap: () {
+                        debugPrint('전송');
+                      },
+                      child: Container(
+                        width: 70,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          color: AppColors.mainColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            '전송',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
