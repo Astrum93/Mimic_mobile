@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mimic_mobile/common/widget/mimic_close_button.dart';
 
-import '../../../common/constant/app_colors.dart';
 import '../../../common/constant/constant.dart';
 import '../home_screen.dart';
 
@@ -41,15 +41,7 @@ class _HomeMenuState extends State<HomeMenu> {
                   ),
 
                   /// 닫기 버튼
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: const Icon(
-                      Icons.close,
-                      color: AppColors.mainColor,
-                    ),
-                  ),
+                  const MimicCloseButton(),
                 ],
               ),
             ],

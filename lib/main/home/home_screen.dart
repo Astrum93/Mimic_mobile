@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mimic_mobile/common/constant/app_colors.dart';
 import 'package:mimic_mobile/common/constant/constant.dart';
+import 'package:mimic_mobile/common/widget/mimic_clolor_button.dart';
 import 'package:mimic_mobile/main/fab/log_in.dart';
 import 'package:mimic_mobile/main/home/menu/home_menu.dart';
 import 'package:mimic_mobile/main/home/vertical_home.dart';
@@ -36,7 +36,8 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.only(right: 8.0),
             child: Row(
               children: [
-                GestureDetector(
+                /// 로그인 버튼
+                MimicColorButton(
                   onTap: () {
                     debugPrint('login');
                     showDialog(
@@ -46,23 +47,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           return const Login();
                         });
                   },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.mainColor,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(4.0),
-                      child: Text(
-                        '로그인',
-                        style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
-                      ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(4.0),
+                    child: Text(
+                      '로그인',
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
+
                 const SizedBox(width: 5),
-                GestureDetector(
+
+                /// 메뉴 버튼
+                MimicColorButton(
                   onTap: () {
                     debugPrint('menu');
                     showDialog(
@@ -72,17 +70,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           return const HomeMenu();
                         });
                   },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.mainColor,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(4.0),
-                      child: Icon(
-                        Icons.menu,
-                        color: Colors.black,
-                      ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(4.0),
+                    child: Icon(
+                      Icons.menu,
+                      color: Colors.black,
                     ),
                   ),
                 ),

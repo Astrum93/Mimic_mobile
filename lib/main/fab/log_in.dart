@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
+import 'package:mimic_mobile/common/widget/mimic_close_button.dart';
 import 'package:mimic_mobile/main/home/join/join_screen.dart';
 
 class Login extends StatefulWidget {
@@ -26,17 +27,9 @@ class _LoginState extends State<Login> {
           child: Column(
             children: [
               /// 닫기 버튼
-              Align(
+              const Align(
                 alignment: Alignment.topRight,
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: const Icon(
-                    Icons.close,
-                    color: AppColors.mainColor,
-                  ),
-                ),
+                child: MimicCloseButton(),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
