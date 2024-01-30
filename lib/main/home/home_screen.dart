@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
 import 'package:mimic_mobile/main/fab/log_in.dart';
+import 'package:mimic_mobile/main/home/menu/home_menu.dart';
 import 'package:mimic_mobile/main/home/vertical_home.dart';
 
 import 'horizontal_home.dart';
@@ -16,7 +17,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
+        surfaceTintColor: Colors.black,
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0),
           child: Image.asset('assets/image/mimic.png'),
@@ -38,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         barrierDismissible: false,
                         context: context,
                         builder: (BuildContext context) {
-                          return Login();
+                          return const Login();
                         });
                   },
                   child: Container(
@@ -60,6 +64,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 GestureDetector(
                   onTap: () {
                     debugPrint('menu');
+                    showDialog(
+                        barrierDismissible: false,
+                        context: context,
+                        builder: (BuildContext context) {
+                          return const HomeMenu();
+                        });
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -83,8 +93,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: OrientationBuilder(
         builder: (context, orientation) {
           return orientation == Orientation.portrait
-              ? VerticalHome()
-              : HorizontalHome();
+              ? const VerticalHome()
+              : const HorizontalHome();
         },
       ),
     );
