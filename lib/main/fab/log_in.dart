@@ -162,7 +162,7 @@ class _LoginState extends State<Login> {
                       ],
                     ),
 
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
 
                     /// 멤버쉽 가입 버튼
                     GestureDetector(
@@ -192,7 +192,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
 
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
 
                     /// 다른 계정 로그인 버튼
                     TextButton(

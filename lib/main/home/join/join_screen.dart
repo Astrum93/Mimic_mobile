@@ -26,7 +26,7 @@ class _JoinScreenState extends State<JoinScreen> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => HomeScreen()));
+                          builder: (context) => const HomeScreen()));
                     },
                     child: Image.asset(
                       '$basePath/mimic.png',
