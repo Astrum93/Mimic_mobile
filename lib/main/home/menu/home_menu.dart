@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../common/constant/app_colors.dart';
+import '../../../common/constant/constant.dart';
 import '../home_screen.dart';
 
 class HomeMenu extends StatefulWidget {
@@ -34,7 +35,7 @@ class _HomeMenuState extends State<HomeMenu> {
                       );
                     },
                     child: Image.asset(
-                      'assets/image/mimic.png',
+                      '$basePath/mimic.png',
                       scale: 4,
                     ),
                   ),

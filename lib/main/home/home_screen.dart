@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
+import 'package:mimic_mobile/common/constant/constant.dart';
 import 'package:mimic_mobile/main/fab/log_in.dart';
 import 'package:mimic_mobile/main/home/menu/home_menu.dart';
 import 'package:mimic_mobile/main/home/vertical_home.dart';
@@ -23,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         surfaceTintColor: Colors.black,
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Image.asset('assets/image/mimic.png'),
+          child: Image.asset('$basePath/mimic.png'),
         ),
         title: const Text(
           'THIS MONTH',

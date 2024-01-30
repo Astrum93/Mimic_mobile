@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
 import 'package:mimic_mobile/main/home/home_screen.dart';
 
+import '../../../common/constant/constant.dart';
+
 class JoinScreen extends StatefulWidget {
   const JoinScreen({super.key});
 
@@ -28,7 +30,7 @@ class _JoinScreenState extends State<JoinScreen> {
                           builder: (context) => HomeScreen()));
                     },
                     child: Image.asset(
-                      'assets/image/mimic.png',
+                      '$basePath/mimic.png',
                       scale: 4,
                     ),
                   ),
