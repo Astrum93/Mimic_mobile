@@ -67,6 +67,11 @@ flutter:
     - assets/image/sing2.png
     - assets/image/mimic_beam.png
     - assets/image/mimic_beam2.png
+    - assets/image/facebook.png
+    - assets/image/kakao.png
+    - assets/image/google.png
+    - assets/image/naver.png
+    - assets/image/apple.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

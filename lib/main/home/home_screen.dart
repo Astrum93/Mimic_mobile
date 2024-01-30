@@ -20,8 +20,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        surfaceTintColor: Colors.black,
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0),
           child: Image.asset('$basePath/mimic.png'),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
+import 'package:mimic_mobile/common/constant/constant.dart';
+import 'package:mimic_mobile/common/widget/circle_image_button.dart';
 import 'package:mimic_mobile/common/widget/mimic_close_button.dart';
 import 'package:mimic_mobile/main/home/join/join_screen.dart';
 
@@ -205,18 +207,33 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     const SizedBox(height: 5),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CircleAvatar(backgroundColor: Colors.grey),
-                        SizedBox(width: 15),
-                        CircleAvatar(backgroundColor: Colors.grey),
-                        SizedBox(width: 15),
-                        CircleAvatar(backgroundColor: Colors.grey),
-                        SizedBox(width: 15),
-                        CircleAvatar(backgroundColor: Colors.grey),
-                        SizedBox(width: 15),
-                        CircleAvatar(backgroundColor: Colors.grey),
+                        CircleAssetImageButton(
+                          onTap: () {},
+                          assetName: '$basePath/kakao.png',
+                        ),
+                        const SizedBox(width: 15),
+                        CircleAssetImageButton(
+                          onTap: () {},
+                          assetName: '$basePath/naver.png',
+                        ),
+                        const SizedBox(width: 15),
+                        CircleAssetImageButton(
+                          onTap: () {},
+                          assetName: '$basePath/facebook.png',
+                        ),
+                        const SizedBox(width: 15),
+                        CircleAssetImageButton(
+                          onTap: () {},
+                          assetName: '$basePath/google.png',
+                        ),
+                        const SizedBox(width: 15),
+                        CircleAssetImageButton(
+                          onTap: () {},
+                          assetName: '$basePath/apple.png',
+                        ),
                       ],
                     )
                   ],

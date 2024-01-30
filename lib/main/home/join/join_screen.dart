@@ -15,7 +15,6 @@ class _JoinScreenState extends State<JoinScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       body: OrientationBuilder(builder: (context, orientation) {
         return SafeArea(
           child: Padding(
