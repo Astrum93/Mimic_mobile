@@ -72,6 +72,12 @@ flutter:
     - assets/image/google.png
     - assets/image/naver.png
     - assets/image/apple.png
+    - assets/image/mimic_QRcode.png
+    - assets/image/grey_facebook.png
+    - assets/image/grey_instagram.png
+    - assets/image/grey_naver_blog.png
+    - assets/image/grey_twitter.png
+    - assets/image/grey_youtube.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
