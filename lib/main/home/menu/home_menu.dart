@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
+import 'package:mimic_mobile/common/widget/asset_image_button.dart';
 import 'package:mimic_mobile/common/widget/mimic_close_button.dart';
 import 'package:mimic_mobile/common/widget/text_arrow_button.dart';
 
@@ -26,6 +27,7 @@ class _HomeMenuState extends State<HomeMenu> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                /// 상단
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -52,7 +54,7 @@ class _HomeMenuState extends State<HomeMenu> {
                 /// 본문
                 Row(
                   children: [
-                    Column(
+                    const Column(
                       children: [
                         TextArrowButton(
                             text: '미믹이 바꾸어 나가는 세상', color: AppColors.mainColor),
@@ -61,25 +63,78 @@ class _HomeMenuState extends State<HomeMenu> {
                         TextArrowButton(text: '내 주변 미믹 플레이스'),
                       ],
                     ),
-                    SizedBox(width: 50),
+                    const SizedBox(width: 50),
                     Center(
                       child: Column(
                         children: [
-                          Text(
+                          const Text(
                             'Download\nMimic App',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 10),
-                          // Image.asset('$baseUrl/'),
-                          // Image.asset('$baseUrl/'),
+                          const SizedBox(height: 10),
+                          Image.asset('$basePath/mimic_QRcode.png', scale: 4),
+                          const SizedBox(height: 10),
+                          Row(
+                            children: [
+                              const Icon(Icons.tag_outlined,
+                                  color: AppColors.mainColor),
+                              Image.asset(
+                                '$basePath/mimic.png',
+                                scale: 6,
+                              ),
+                            ],
+                          ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
+
+                /// 하단
+                const Padding(
+                  padding: EdgeInsets.only(left: 40.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 30),
+                      Text(
+                        '다른 곳에서도 만나요.',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      Row(
+                        children: [
+                          AssetImageButton(
+                              assetPath: '$basePath/grey_twitter.png',
+                              scale: 3),
+                          SizedBox(width: 30),
+                          AssetImageButton(
+                              assetPath: '$basePath/grey_instagram.png',
+                              scale: 3),
+                          SizedBox(width: 30),
+                          AssetImageButton(
+                              assetPath: '$basePath/grey_facebook.png',
+                              scale: 3),
+                          SizedBox(width: 30),
+                          AssetImageButton(
+                              assetPath: '$basePath/grey_naver_blog.png',
+                              scale: 3),
+                          SizedBox(width: 30),
+                          AssetImageButton(
+                              assetPath: '$basePath/grey_youtube.png',
+                              scale: 3),
+                          SizedBox(width: 30),
+                        ],
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ),
