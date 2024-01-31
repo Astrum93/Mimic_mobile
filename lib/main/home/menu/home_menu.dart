@@ -44,6 +44,17 @@ class _HomeMenuState extends State<HomeMenu> {
                   const MimicCloseButton(),
                 ],
               ),
+              Container(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text('미믹이 바꾸어 나가는 세상'),
+                      ],
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         );

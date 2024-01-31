@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:mimic_mobile/common/constant/constant.dart';
 import 'package:mimic_mobile/common/widget/mimic_clolor_button.dart';
 import 'package:mimic_mobile/main/fab/log_in.dart';
+import 'package:mimic_mobile/main/home/axis_screen/vertical_home.dart';
 import 'package:mimic_mobile/main/home/menu/home_menu.dart';
-import 'package:mimic_mobile/main/home/vertical_home.dart';
 
-import 'horizontal_home.dart';
+import 'axis_screen/horizontal_home.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
