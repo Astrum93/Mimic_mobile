@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../common/widget/grey_button.dart';
+import '../../../common/widget/grey_button.dart';
 
-class HorizontalHome extends StatefulWidget {
-  const HorizontalHome({super.key});
+class VerticalHome extends StatefulWidget {
+  const VerticalHome({super.key});
 
   @override
-  State<HorizontalHome> createState() => _HorizontalHomeState();
+  State<VerticalHome> createState() => _VerticalHomeState();
 }
 
-class _HorizontalHomeState extends State<HorizontalHome> {
+class _VerticalHomeState extends State<VerticalHome> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,16 +18,15 @@ class _HorizontalHomeState extends State<HorizontalHome> {
         scrollDirection: Axis.vertical,
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
+          height: MediaQuery.of(context).size.height / 2,
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              /// 버튼들
               Positioned(
-                top: 270,
-                left: 220,
+                top: 250,
+                left: 20,
                 child: Container(
-                  width: 400,
+                  width: 350,
                   decoration: BoxDecoration(
                     color: Colors.black26,
                     borderRadius: BorderRadius.circular(8),
@@ -104,8 +103,6 @@ class _HorizontalHomeState extends State<HorizontalHome> {
                   ),
                 ),
               ),
-
-              /// 동영상
               Positioned(
                 top: 10,
                 left: 0,
@@ -121,8 +118,6 @@ class _HorizontalHomeState extends State<HorizontalHome> {
                   ),
                 ),
               ),
-
-              /// 왼쪽 mimic icon
               Positioned(
                 left: -30,
                 top: 200,
@@ -131,8 +126,6 @@ class _HorizontalHomeState extends State<HorizontalHome> {
                   scale: 5,
                 ),
               ),
-
-              /// 오른쪽 mimic icon
               Positioned(
                 right: -30,
                 top: 200,
