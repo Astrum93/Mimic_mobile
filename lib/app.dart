@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'main/home/home_screen.dart';
 
@@ -26,3 +27,17 @@ class _AppState extends State<App> {
 }
 
 /// Go Route
+
+late final GoRouter _router = GoRouter(
+  routes: <GoRoute>[
+    GoRoute(
+      path: '/',
+      redirect: (_, __) => '/main',
+    ),
+    GoRoute(
+      path: '/main',
+      redirect: (_, __) => '/main/home',
+    ),
+  ],
+  debugLogDiagnostics: true,
+);
