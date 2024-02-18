@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
 import 'package:mimic_mobile/common/widget/asset_image_button.dart';
 import 'package:mimic_mobile/common/widget/mimic_close_button.dart';
 import 'package:mimic_mobile/common/widget/text_arrow_button.dart';
 
 import '../../../common/constant/constant.dart';
-import '../home_screen.dart';
 
 class HomeMenu extends StatefulWidget {
   const HomeMenu({super.key});
@@ -34,11 +34,7 @@ class _HomeMenuState extends State<HomeMenu> {
                     /// 미믹 로고
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
-                          ),
-                        );
+                        context.go('/home');
                       },
                       child: Image.asset(
                         '$basePath/mimic.png',

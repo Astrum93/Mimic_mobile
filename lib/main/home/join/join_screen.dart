@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
-import 'package:mimic_mobile/main/home/home_screen.dart';
 
 import '../../../common/constant/constant.dart';
 
@@ -25,8 +25,7 @@ class _JoinScreenState extends State<JoinScreen> {
                   alignment: Alignment.topLeft,
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const HomeScreen()));
+                      context.go('/home');
                     },
                     child: Image.asset(
                       '$basePath/mimic.png',

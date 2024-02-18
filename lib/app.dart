@@ -38,6 +38,7 @@ late final GoRouter _router = GoRouter(
       path: '/main',
       redirect: (_, __) => '/main/home',
     ),
+    GoRoute(path: '/join', redirect: (_, __) => 'join')
   ],
   debugLogDiagnostics: true,
 );
