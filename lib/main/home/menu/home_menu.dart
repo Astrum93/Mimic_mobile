@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
 import 'package:mimic_mobile/common/widget/asset_image_button.dart';
 import 'package:mimic_mobile/common/widget/mimic_close_button.dart';
@@ -32,14 +31,9 @@ class _HomeMenuState extends State<HomeMenu> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     /// 미믹 로고
-                    GestureDetector(
-                      onTap: () {
-                        context.go('/home');
-                      },
-                      child: Image.asset(
-                        '$basePath/mimic.png',
-                        scale: 4,
-                      ),
+                    Image.asset(
+                      '$basePath/mimic.png',
+                      scale: 4,
                     ),
 
                     /// 닫기 버튼

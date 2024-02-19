@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import 'main/home/home_screen.dart';
+import 'package:mimic_mobile/main/home/home_screen.dart';
+import 'package:mimic_mobile/main/home/join/join_screen.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -13,7 +13,8 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _router,
       theme: ThemeData(
           brightness: Brightness.dark,
           scaffoldBackgroundColor: Colors.black,
@@ -21,7 +22,6 @@ class _AppState extends State<App> {
             backgroundColor: Colors.black,
             surfaceTintColor: Colors.black,
           )),
-      home: const HomeScreen(),
     );
   }
 }
@@ -29,16 +29,33 @@ class _AppState extends State<App> {
 /// Go Route
 
 late final GoRouter _router = GoRouter(
-  routes: <GoRoute>[
+  routes: <RouteBase>[
     GoRoute(
       path: '/',
-      redirect: (_, __) => '/main',
+      builder: (BuildContext context, GoRouterState state) {
+        return const HomeScreen();
+      },
+      routes: <RouteBase>[
+        GoRoute(
+          path: 'home',
+
+          /// redirect Screen 생성 후 추가 예정
+          // redirect: (_, __) => '/',
+          builder: (BuildContext context, GoRouterState state) {
+            return const HomeScreen();
+          },
+        ),
+        GoRoute(
+          path: 'join',
+
+          /// redirect Screen 생성 후 추가 예정
+          // redirect: (_, __) => '/',
+          builder: (BuildContext context, GoRouterState state) {
+            return const JoinScreen();
+          },
+        ),
+      ],
     ),
-    GoRoute(
-      path: '/main',
-      redirect: (_, __) => '/main/home',
-    ),
-    GoRoute(path: '/join', redirect: (_, __) => 'join')
   ],
   debugLogDiagnostics: true,
 );

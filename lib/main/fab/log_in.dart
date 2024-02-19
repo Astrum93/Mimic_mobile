@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mimic_mobile/common/constant/app_colors.dart';
 import 'package:mimic_mobile/common/constant/constant.dart';
 import 'package:mimic_mobile/common/widget/circle_image_button.dart';
 import 'package:mimic_mobile/common/widget/mimic_close_button.dart';
-import 'package:mimic_mobile/main/home/join/join_screen.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -167,10 +167,7 @@ class _LoginState extends State<Login> {
                     /// 멤버쉽 가입 버튼
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            (context),
-                            MaterialPageRoute(
-                                builder: (context) => const JoinScreen()));
+                        context.go('/join');
                       },
                       child: Container(
                         width: 210,
