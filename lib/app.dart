@@ -16,19 +16,20 @@ class _AppState extends State<App> {
     return MaterialApp.router(
       routerConfig: _router,
       theme: ThemeData(
-          brightness: Brightness.dark,
-          scaffoldBackgroundColor: Colors.black,
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.black,
-            surfaceTintColor: Colors.black,
-          )),
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.black,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black,
+          surfaceTintColor: Colors.black,
+        ),
+      ),
     );
   }
 }
 
 /// Go Route
 
-late final GoRouter _router = GoRouter(
+final GoRouter _router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: '/',
